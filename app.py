@@ -1,6 +1,7 @@
 from flask import Flask
 from datetime import datetime
 from time import sleep
+import random
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
-    sleep_time = randint(1, 7)
+    sleep_time = random.randrange(7)
     sleep(sleep_time)
 
     return """
