@@ -1,10 +1,14 @@
 from flask import Flask
 from datetime import datetime
+from time import sleep
 app = Flask(__name__)
 
 @app.route('/')
 def homepage():
     the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+
+    sleep_time = 10
+    sleep(sleep_time)
 
     return """
     <h1>Hello heroku</h1>
